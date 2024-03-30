@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const types = ['movie', 'tv']
+    </script>
+    <script type="module" src="../scripts/modules/home.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="bg-[#202023]">
+    <div class="max-w-screen-2xl flex-wrap items-center justify-between mx-auto w-full">
+        <div class="reletive">
+            <div class="w-full h-[70vh] bg-center bg-cover bg-no-repeat"
+                style="background-image: url('https://image.tmdb.org/t/p/original/7L9MgdBPMMCnkcKN2nAD862g0qN.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-r from-black  "></div>
+                <header class="w-full h-16 fixed top-0 bg-transparent z-10" id="header">
+                    <div class="flex gap-[33rem]">
+                        <div class="flex pl-10 pt-4">
+                            <a href="../neftlix/index.html"><img class="w-24 h-12"
+                                    src="https://exquisite-pegasus-b9abd5.netlify.app/images/netflix.svg" alt=""></a>
+                            <div class="pt-2 ml-6">
+                                <a href="../index.html" class="menu__link ">Home</a>
+                                <a href="./series.html " class="menu__link active">Series</a>
+                                <a href="./movies.html" class="menu__link">Movies</a>
+                                <a href="./list.html" class="menu__link">My List</a>
+                            </div>
+                        </div>
+                        <div class="flex mt-4 gap-4 ml-[12%]">
+                            <input class="w-[220px] h-[40px] bg-transparent text-white placeholder:text-white"
+                                type="text" id="searchInput" placeholder="Search...">
+                            <button class="w-[55px] h-[40px] rounded-[5px] bg-orange-200 hover:bg-orange-300">
+                                <lord-icon class="pt-[2.5px]" src="https://cdn.lordicon.com/vyqvtrtg.json"
+                                    trigger="hover" style="width:25px;height:25px">
+                                </lord-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div> <button data-collapse-toggle="mobile-menu-2" type="button"
+                            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="mobile-menu-2" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+
+                            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button></div>
+                </header>
+            </div>
+        </div>
+
+
+
+        <div id="searchContainer" class="search-container">
+            <div id="searchResults"></div>
+        </div>
+
+        <main class="absolute inset-y-0  ml-8    " data-aos="fade-down">
+
+            <p class="text-[60px] text-red-800 pt-[18%] pl-10">Tokyo Vice</p>
+            <p class="text-white text-[19px]  pl-10">A first-hand account of the Tokyo Metropolitan Police beat
+                following Jake Adelstein, an American journalist who embeds himself <br> into the Tokyo Vice police
+                squad to
+                reveal corruption. Based on Jake Adelstein’s non-fiction book of the same name.
+
+            </p>
+
+            <button id="playBtn" class="text-white w-[10%] h-[5vh] rounded bg-red-600 mt-6 ml-10">Watch
+                now</button><button onclick="location.href='./listitem.html'"
+                class="text-white w-[12%] h-[5vh] rounded bg-zinc-800 ml-5">More Information</button>
+
+
+
+        </main>
+
+
+        <div class="banner home">
+            <div class="banner-genres mobile"></div>
+        </div>
+
+        <main>
+            <div class="poster"></div>
+        </main>
+
+        <section class="modal overlay">
+            <div class="modal-card card"></div>
+        </section>
+
+        <div class="iframe-wrapper overlay">
+            <iframe title="trailer">
+                <h2>hello</h2>
+            </iframe>
+        </div>
+        <footer>
+            <p class="text-gray-400 text-center">© 2022 Steav Khet. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <script src="../scripts/modules/script.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+</body>
+
+</html>
