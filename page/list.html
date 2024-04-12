@@ -1,61 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const types = ['movie', 'tv']
-    </script>
-    <script type="module" src="../scripts/modules/home.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            const types = ['movie', 'tv']
+        </script>
+        <script type="module" src="../scripts/modules/home.js"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
                     }
                 }
             }
-        }
-    </script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-</head>
+        </script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    </head>
 
-<body class="bg-[#202023]">
-    <div class="max-w-screen-2xl flex-wrap items-center justify-between mx-auto w-full">
-        <div class="reletive bg-zinc-900">
+    <body class="bg-[#202023]">
+        <div class="max-w-screen flex-wrap items-center justify-between mx-auto w-full">
+            <div class="reletive">
 
-            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
-            <header class="w-full h-16 fixed top-0 bg-transparent z-10" id="header">
-                <div class="flex gap-[33rem]">
-                    <div class="flex pl-10 pt-4">
-                        <a href="../neftlix/index.html"><img class="w-24 h-12"
-                                src="https://exquisite-pegasus-b9abd5.netlify.app/images/netflix.svg" alt=""></a>
-                        <div class="pt-2 ml-6">
+                <div class="absolute inset-0  "></div>
+                <header class="w-full h-16 fixed top-0 bg-transparent z-50 flex items-center justify-between px-4">
+                    <div class="flex items-center"> <!-- Netflix logo and navigation links -->
+                        <a href="../neftlix/index.html">
+                            <img class="w-24 h-12" src="https://exquisite-pegasus-b9abd5.netlify.app/images/netflix.svg"
+                                alt="">
+                        </a>
+                        <div class="hidden md:flex items-center ml-4"> <!-- Show only on desktop screens -->
                             <a href="../index.html" class="menu__link ">Home</a>
-                            <a href="./series.html " class="menu__link">Series</a>
-                            <a href="./movies.html" class="menu__link">Movies</a>
+                            <a href="./series.html" class="menu__link ">Series</a>
+                            <a href="./movies.html" class="menu__link ">Movies</a>
                             <a href="./list.html" class="menu__link active">My List</a>
                         </div>
                     </div>
-                    <div class="flex mt-4 gap-4 ml-[12%]">
-                        <input class="w-[220px] h-[40px] bg-transparent text-white placeholder:text-white" type="text"
-                            id="searchInput" placeholder="Search...">
+                    <div class="flex items-center ml-48 md:ml-0"> <!-- For mobile adaptation -->
+                        <input class="w-[220px] h-[40px] mt-2 bg-transparent text-white placeholder:text-white mr-2"
+                            type="text" id="searchInput" placeholder="Search...">
                         <button class="w-[55px] h-[40px] rounded-[5px] bg-orange-200 hover:bg-orange-300">
                             <lord-icon class="pt-[2.5px]" src="https://cdn.lordicon.com/vyqvtrtg.json" trigger="hover"
                                 style="width:25px;height:25px">
                             </lord-icon>
                         </button>
                     </div>
-                </div>
-                <div> <button data-collapse-toggle="mobile-menu-2" type="button"
+
+
+
+                    <button data-collapse-toggle="mobile-menu-2" type="button" id="menuToggle"
                         class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="mobile-menu-2" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
@@ -64,155 +67,141 @@
                                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                                 clip-rule="evenodd"></path>
                         </svg>
+                    </button>
 
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button></div>
-            </header>
+                    <div class="hidden lg:hidden mt-2" id="mobileMenu">
+                        <a href="../index.html" class="menu__link block mb-2">Home</a>
+                        <a href="./series.html" class="menu__link block mb-2">Series</a>
+                        <a href="./movies.html" class="menu__link block mb-2">Movies</a>
+                        <a href="./list.html" class="menu__link block">My List</a>
+                    </div>
+
+
+
+
+                </header>
+            </div>
         </div>
-    </div>
-    <div id="searchContainer" class="search-container">
-        <div id="searchResults"></div>
-    </div>
-    <main class="ml-[20rem] mt-[4%]" id="mainContent">
-        <section>
-            <div class="w-[65%] h-[40vh] rounded-[8px] mt-6 overflow-hidden relative flex bg-center bg-cover bg-no-repeat"
-                style="background-image: url('https://image.tmdb.org/t/p/w1280/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg;');">
-                <img class="w-[11.4rem] relative z-10"
-                    src="https://image.tmdb.org/t/p/w342/wkfG7DaExmcVsGLR4kLouMwxeT5.jpg" alt="">
-                <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent w-[70rem] ml-[11rem]"></div>
-                <div class="relative z-10">
-                    <h1 class="text-red-800 text-[25px] ml-[1.5rem] mt-[1rem]">Kung Fu Panda 4</h1>
-                    <ul class="flex text-white text-[15px] gap-6 ml-10 mt-4 ">
-                        <li>2024</li>
-                        <li class="bg-zinc-950 w-16  pl-2 rounded-md">Action</li>
-                        <li class="bg-zinc-950 w-24 pl-4 rounded-md">Animation</li>
-                        <li class="bg-zinc-950 w-20 pl-4 rounded-md">Comedy</li>
-                    </ul>
+        <div id="searchContainer" class="search-container">
+            <div id="searchResults"></div>
+        </div>
+        <main class="ml-[20rem] mt-[4%]" id="mainContent">
+            <section>
+                <div id="textToClear1"
+                    class="w-[65%] h-[40vh] rounded-[8px] mt-6 overflow-hidden relative flex bg-center bg-cover bg-no-repeat"
+                    style="background-image: url('https://image.tmdb.org/t/p/w1280/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg;');">
+                    <img class="w-[11.4rem] relative z-10"
+                        src="https://image.tmdb.org/t/p/w342/wkfG7DaExmcVsGLR4kLouMwxeT5.jpg" alt="">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent w-[70rem] ml-[11rem]">
+                    </div>
+                    <div class="relative z-10">
+                        <h1 class="text-red-800 text-[25px] ml-[1.5rem] mt-[1rem]">Kung Fu Panda 4</h1>
+                        <ul class="flex text-white text-[15px] gap-6 ml-10 mt-4 ">
+                            <li>2024</li>
+                            <li class="bg-zinc-950 w-16  pl-2 rounded-md">Action</li>
+                            <li class="bg-zinc-950 w-24 pl-4 rounded-md">Animation</li>
+                            <li class="bg-zinc-950 w-20 pl-4 rounded-md">Comedy</li>
+                        </ul>
 
+                    </div>
+
+                    <div class="flex">
+                        <article class="flex relative z-10">
+                            <section class=" w-[25rem] h-[7rem] mt-[7.5rem] ml-[-70%]">
+                                <p class="text-white">Po is gearing up to become the spiritual leader of his Valley
+                                    of
+                                    Peace, but also needs someone to take his place as Dragon Warrior. As such, he
+                                    will
+                                    train a new kung fu practitioner for the spot .
+
+                                </p>
+                            </section>
+
+                            <lord-icon class="ml-[4rem] mt-[13rem]" id="likeIcon"
+                                src="https://cdn.lordicon.com/wpyrrmcq.json" trigger="hover" colors="primary:#ffffff"
+                                style="width:25px;height:25px">
+                            </lord-icon>
+                    </div>
                 </div>
+            </section>
+            <section>
+                <div id="textToClear2"
+                    class="w-[65%] h-[40vh] rounded-[8px] mt-6 overflow-hidden relative flex bg-center bg-cover bg-no-repeat"
+                    style="background-image: url('https://image.tmdb.org/t/p/w1280/mDeUmPe4MF35WWlAqj4QFX5UauJ.jpg');">
+                    <img class="w-[11.4rem] relative z-10"
+                        src="https://image.tmdb.org/t/p/w342/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent w-[70rem] ml-[11rem]">
+                    </div>
+                    <div class="relative z-10">
+                        <h1 class="text-red-800 text-[25px] ml-[1.5rem] mt-[1rem]">No Way Up</h1>
+                        <ul class="flex text-white text-[15px] gap-6 ml-10 mt-4 ">
+                            <li>2024</li>
+                            <li class="bg-zinc-950 w-16  pl-2 rounded-md">Action</li>
+                            <li class="bg-zinc-950 w-24 pl-4 rounded-md">Horror</li>
+                            <li class="bg-zinc-950 w-20 pl-4 rounded-md">Thiller</li>
+                        </ul>
 
-                <div class="flex">
-                    <article class="flex relative z-10">
-                        <section class=" w-[25rem] h-[7rem] mt-[7.5rem] ml-[-70%]">
-                            <p class="text-white">Po is gearing up to become the spiritual leader of his Valley of
-                                Peace, but also needs someone to take his place as Dragon Warrior. As such, he will
-                                train a new kung fu practitioner for the spot .
+                    </div>
 
-                            </p>
-                        </section>
+                    <div class="flex">
+                        <article class="flex relative z-10">
+                            <section class=" w-[25rem] h-[7rem] mt-[7.5rem] ml-[-70%]">
+                                <p class="text-white">Characters from different backgrounds are thrown
+                                    together when the
+                                    plane they're travelling on crashes into the Pacific Ocean. A nightmare fight
+                                    for
+                                    survival ensues with the air supply running out and dangers creeping in from all
+                                    sides.
+                                </p>
 
-                        <lord-icon class="ml-[4rem] mt-[13rem]" id="likeIcon"
-                            src="https://cdn.lordicon.com/wpyrrmcq.json" trigger="hover" colors="primary:#ffffff"
-                            style="width:25px;height:25px">
-                        </lord-icon>
+                            </section>
+
+                            <lord-icon class="ml-[4rem] mt-[13rem]" id="likeIcon"
+                                src="https://cdn.lordicon.com/wpyrrmcq.json" trigger="hover" colors="primary:#ffffff"
+                                style="width:25px;height:25px" onclick="clearText()">
+                            </lord-icon>
+
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="w-[65%] h-[40vh] rounded-[8px] mt-6 overflow-hidden relative flex bg-center bg-cover bg-no-repeat"
-                style="background-image: url('https://image.tmdb.org/t/p/w1280/mDeUmPe4MF35WWlAqj4QFX5UauJ.jpg');">
-                <img class="w-[11.4rem] relative z-10"
-                    src="https://image.tmdb.org/t/p/w342/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="">
-                <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent w-[70rem] ml-[11rem]"></div>
-                <div class="relative z-10">
-                    <h1 class="text-red-800 text-[25px] ml-[1.5rem] mt-[1rem]">No Way Up</h1>
-                    <ul class="flex text-white text-[15px] gap-6 ml-10 mt-4 ">
-                        <li>2024</li>
-                        <li class="bg-zinc-950 w-16  pl-2 rounded-md">Action</li>
-                        <li class="bg-zinc-950 w-24 pl-4 rounded-md">Horror</li>
-                        <li class="bg-zinc-950 w-20 pl-4 rounded-md">Thiller</li>
-                    </ul>
+            </section>
+            </article>
+        </main>
 
-                </div>
-
-                <div class="flex">
-                    <article class="flex relative z-10">
-                        <section class=" w-[25rem] h-[7rem] mt-[7.5rem] ml-[-70%]">
-                            <p class="text-white">Characters from different backgrounds are thrown together when the
-                                plane they're travelling on crashes into the Pacific Ocean. A nightmare fight for
-                                survival ensues with the air supply running out and dangers creeping in from all sides.
-                            </p>
-                        </section>
-
-                        <lord-icon class="ml-[4rem] mt-[13rem]" id="likeIcon"
-                            src="https://cdn.lordicon.com/wpyrrmcq.json" trigger="hover" colors="primary:#ffffff"
-                            style="width:25px;height:25px">
-                        </lord-icon>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p class="text-gray-400 text-center">© 2022 Steav Khet. All Rights Reserved.</p>
-    </footer>
-    </div>
-
-    <script>
-        // Get the toggle button element
-        const toggleBtn = document.getElementById('toggleBtn');
-        const icon = document.getElementById('icon');
-
-        // Toggle dark/light mode
-        toggleBtn.addEventListener('click', () => {
-            // Toggle dark mode class on body
-            document.body.classList.toggle('dark');
-
-            // Update button icon based on mode
-            const isDark = document.body.classList.contains('dark');
-            icon.className = isDark ? 'fas fa-sun text-black' : 'fas fa-moon text-black';
-
-            // Update local storage to remember user preference
-            localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-        });
-
-        // Check if dark mode is already enabled
-        const savedMode = localStorage.getItem('darkMode');
-        if (savedMode === 'dark') {
-            document.body.classList.add('dark');
-            icon.className = 'fas fa-sun text-black';
-        }
-    </script>
-
-
-    </script>
-    <script>// Get the Play button and video iframe by their IDs
-        const playBtn = document.getElementById('playBtn');
-        const blurBackground = document.getElementById('blurBackground');
-        const videoContainer = document.getElementById('videoContainer');
-        const videoFrame = document.getElementById('videoFrame');
-
-        playBtn.addEventListener('click', function () {
-            // Show the blurred background and video container
-            blurBackground.style.display = 'block';
-            videoContainer.style.display = 'block';
-
-            // Play the video
-            videoFrame.src += "&autoplay=1"; // Append autoplay parameter to the video URL
-        });
-
-        // Function to hide the video container and stop video playback
-        function hideVideo() {
-            blurBackground.style.display = 'none';
-            videoContainer.style.display = 'none';
-            videoFrame.src = videoFrame.src.replace("&autoplay=1", ""); // Remove autoplay parameter
-        }
-
-        // Add click event to blur background to hide the video
-        blurBackground.addEventListener('click', hideVideo);
-    </script>
+        <footer>
+            <p class="text-gray-400 text-center">© 2022 Steav Khet. All Rights Reserved.</p>
+        </footer>
+        </div>
 
 
 
-    <script src="../scripts/modules/script.js"></script>
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-</body>
 
-</html>
+        <script>
+            var lordIcons = document.querySelectorAll('lord-icon');
+
+            // Loop through each Lord Icon element
+            lordIcons.forEach(function (icon, index) {
+                // Add click event listener to each Lord Icon
+                icon.addEventListener('click', function () {
+                    // Get the corresponding paragraph element
+                    var textToClear1 = "textToClear" + (index + 1);
+                    var paragraph = document.getElementById(textToClear1);
+
+                    // Hide the paragraph
+                    paragraph.style.display = "none"; // Hides the corresponding paragraph
+                    // OR
+                    // paragraph.innerText = ""; // Clears the content of the corresponding paragraph
+                });
+            });
+
+
+
+        </script>
+
+
+        <script src="../scripts/modules/script.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    </body>
+
+    </html>

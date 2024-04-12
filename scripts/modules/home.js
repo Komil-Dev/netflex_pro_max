@@ -26,3 +26,5 @@ getMovies().then((res) => {
 getUpcoming().then(({ results }) => pushMovie(results, 4, "movie", titles[4]));
 
 
+
+
